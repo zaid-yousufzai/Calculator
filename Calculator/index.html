@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            
+            display: flex;
+        }
+        .calculator{
+            border: 2px solid black;
+            
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            background-color: antiquewhite;
+            box-sizing: border-box;
+            justify-content: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculator</h1>
+<input type="number" id="first">
+<br><br>
+<input type="number" name="" id="second">
+<br> <br>
+
+<select name="" id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<br><br>
+<button onclick="calc()"><h3>Calculate</h3></button>
+<br><br><br>
+<input type="text" id="result">
+        </div>
+    </div>
+</body>
+
+<script>
+function calc()
+{
+    var a=document.getElementById("first").value;
+    var b=document.getElementById("second").value;
+    var ope=document.getElementById("op").value;
+    if(ope=='+')
+    {
+        var c= parseInt(a)+parseInt(b);
+    }
+    if(ope=='-')
+    {
+        var c= parseInt(a)-parseInt(b);
+    }
+    if(ope=='*')
+    {
+        var c= parseInt(a)*parseInt(b);
+    }
+    if(ope=='/')
+    {
+        var c= parseInt(a)/parseInt(b);
+    }
+    document.getElementById('result').value=c;
+}
+</script>
+</html>
